@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#06070A">
-<title>2026 WAY 신학과 내전 · TEAM 영윤 vs TEAM 지훈</title>
+<title>2026 WAY 내전 · TEAM 영윤 vs TEAM 지훈</title>
 <meta name="description" content="WAY 신학과 학생회 롤 내전 공식 로스터. TEAM 영윤 vs TEAM 지훈, 10인 선수 프로필.">
 <meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -87,6 +87,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   overflow:hidden;isolation:isolate;padding:calc(env(safe-area-inset-top) + 18px) var(--pad) calc(env(safe-area-inset-bottom) + 18px)}
 .hero-bg{position:absolute;inset:0;z-index:-2}
 .hero-half{position:absolute;inset:0;overflow:hidden}
+.hero-half picture{display:block;width:100%;height:100%}
 .hero-half img{width:100%;height:100%;object-fit:cover}
 .hero-half::after{content:"";position:absolute;inset:0}
 .hero-half.a{inset:0 auto 0 0;width:62%;clip-path:polygon(0 0,91.9% 0,69.4% 100%,0 100%)}
@@ -122,12 +123,6 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .side{display:flex;flex-direction:column;gap:8px;min-width:0}
 .side.a{align-items:flex-start;text-align:left}
 .side.b{align-items:flex-end;text-align:right}
-.side .med{width:clamp(46px,6.6vw,86px);aspect-ratio:1;border-radius:50%;padding:3px;flex:none;
-  background:rgba(0,0,0,.55);border:2px solid;box-shadow:0 8px 30px rgba(0,0,0,.6)}
-.side.a .med{border-color:var(--A);box-shadow:0 8px 30px rgba(0,0,0,.6),0 0 26px rgba(46,130,232,.4)}
-.side.b .med{border-color:var(--B);box-shadow:0 8px 30px rgba(0,0,0,.6),0 0 26px rgba(224,55,75,.4)}
-.side .med img{width:100%;height:100%;object-fit:cover;border-radius:50%}
-@media (max-height:640px){.side .med{display:none}}
 .side .tag{font-family:var(--cond);font-weight:700;letter-spacing:.3em;font-size:clamp(10px,1.4vw,12px)}
 .side.a .tag{color:var(--A-lt)}
 .side.b .tag{color:var(--B-lt)}
@@ -165,7 +160,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 
 @media (max-width:760px){
   .hero-half.a{inset:0 0 auto 0;width:100%;height:56%;clip-path:polygon(0 0,100% 0,100% 80.4%,0 98.2%)}
-  .hero-half.a img{object-position:34% 50%}
+  .hero-half.a img{object-position:62% 50%}
   .hero-half.b{inset:44% 0 0 0;width:100%;height:56%;clip-path:polygon(0 19.6%,100% 1.8%,100% 100%,0 100%)}
   .hero-half.b img{object-position:88% 50%;filter:grayscale(.28) contrast(1.12) brightness(.92)}
   .hero-seam{top:auto;bottom:auto;left:-6%;right:-6%;width:auto;height:2px;top:50%;
@@ -361,9 +356,6 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .ch:hover .fr{border-color:var(--gold);transform:translateY(-3px)}
 .ch .kn{display:block;margin-top:7px;font-size:11.5px;font-weight:600;color:var(--ink-2);letter-spacing:-.02em;
   white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.ch .limb{display:block;font-family:var(--cond);font-weight:600;letter-spacing:.14em;font-size:9.5px;
-  color:var(--gold-dk);text-transform:uppercase;margin-top:2px}
-.ch .limb.kr{font-family:var(--kr);letter-spacing:.02em;font-size:10px;color:#96794a}
 .note{margin-top:10px;font-size:12.5px;color:var(--ink-3);line-height:1.55}
 
 /* career */
@@ -458,7 +450,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 <!-- ===== NAV ===== -->
 <header class="nav" id="nav">
   <div class="nav-in">
-    <div class="nav-mark">2026 <b>WAY</b> 신학과 내전</div>
+    <div class="nav-mark">2026 <b>WAY</b> 내전</div>
     <nav class="nav-links" aria-label="섹션 이동">
       <a href="#matchup">대진</a>
       <a href="#team-a" class="a">TEAM 영윤</a>
@@ -471,7 +463,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 <!-- ===== HERO ===== -->
 <section class="hero" id="top">
   <div class="hero-bg" aria-hidden="true">
-    <div class="hero-half a"><img src="assets/banner/suyoungyun.jpg" alt=""></div>
+    <div class="hero-half a"><picture>
+      <source media="(max-width:760px)" srcset="assets/hero/suyoungyun-m.jpg">
+      <img src="assets/banner/suyoungyun.jpg" alt="">
+    </picture></div>
     <div class="hero-half b"><img src="assets/banner/gospel.jpg" alt=""></div>
   </div>
   <div class="hero-seam" aria-hidden="true"></div>
@@ -479,13 +474,12 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 
   <div class="hero-top">
     <p class="eyebrow" style="margin:0"><span>WAY 신학과 학생회 · League of Legends 2026</span></p>
-    <h1 class="hero-title"><span class="yr">2026</span><span class="ttl">WAY 신학과 내전</span></h1>
+    <h1 class="hero-title"><span class="yr">2026</span><span class="ttl">WAY 내전</span></h1>
     <p class="hero-sub">5 vs 5 · 학생회 공식 내전 로스터</p>
   </div>
 
   <div class="hero-vs">
     <div class="side a">
-      <span class="med"><img src="assets/face/suyoungyun.jpg" alt="" width="86" height="86"></span>
       <span class="tag">Blue Side</span>
       <span class="nm">TEAM<br>영윤</span>
       <span class="cap">CAPTAIN 서영윤</span>
@@ -496,7 +490,6 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
       <span>VS</span>
     </div>
     <div class="side b">
-      <span class="med"><img src="assets/face/gospel.jpg" alt="" width="86" height="86"></span>
       <span class="tag">Red Side</span>
       <span class="nm">TEAM<br>지훈</span>
       <span class="cap">CAPTAIN 박지훈</span>
@@ -519,7 +512,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   <div class="wrap">
     <div class="sec-head rv">
       <p class="eyebrow" style="margin:0"><span>Match Up</span></p>
-      <h2 class="sec-title">ROSTER 5 vs 5<small>양 팀 엔트리 · 이름을 누르면 프로필로 이동합니다</small></h2>
+      <h2 class="sec-title">ROSTER 5 vs 5</h2>
       <div class="rule"></div>
     </div>
     <div class="mgrid">
@@ -586,7 +579,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 </section>
 
 <footer class="foot">
-  <div class="mk">2026 WAY 신학과 내전</div>
+  <div class="mk">2026 WAY 내전</div>
   <div class="div"></div>
   <div class="sub">Team 영윤 &nbsp;·&nbsp; VS &nbsp;·&nbsp; Team 지훈</div>
   <p class="kr">WAY 신학과 학생회 · 선수 소개 및 프로필 이미지는 참가자 본인 제출 자료입니다.</p>
@@ -628,13 +621,12 @@ const CH = {
   MissFortune:'미스 포츈', Lucian:'루시안', Vayne:'베인', Yasuo:'야스오', Yone:'요네',
   Khazix:'카직스', XinZhao:'신 짜오', Kayn:'케인', Ekko:'에코'
 };
-const LIMB = ['오른팔','왼팔','오른다리','왼다리'];
 
 /* ================= PLAYERS ================= */
 const PLAYERS = [
 /* ---------- TEAM 영윤 ---------- */
 {
-  team:'A', no:'01', slug:'mode', name:'진성준', handle:'모데하는사람', tier:'emerald',
+  team:'A', slug:'mode', name:'진성준', handle:'모데하는사람', tier:'emerald',
   pos:[{p:'top',k:'pri',n:'주 라인'}],
   limbs:['Mordekaiser','Volibear','Renekton','Darius'],
   career:[
@@ -645,21 +637,21 @@ const PLAYERS = [
   oath:'내 오른팔과 왼팔을 봉인하지 않는다면 탑은 불탈 것이다'
 },
 {
-  team:'A', no:'02', slug:'yoyohan', name:'오요한', handle:'요요한', tier:'silver',
+  team:'A', slug:'yoyohan', name:'오요한', handle:'요요한', tier:'silver',
   pos:[{p:'top',k:'pri',n:'주 라인'}],
   limbs:['Renekton','Zac','TahmKench','Jax'], limbQ:[false,false,false,true],
   career:[{y:'2023', t:'신학과 롤 대회 <b>우승</b> (미드)'}],
   oath:'진성준은 내가 잡는다.'
 },
 {
-  team:'A', no:'03', slug:'leebbang', name:'이상학', handle:'LEEBBANGBBOONG', tier:'none',
+  team:'A', slug:'leebbang', name:'이상학', handle:'LEEBBANGBBOONG', tier:'none',
   pos:[{p:'sup',k:'pri',n:'주 라인'}],
   limbs:['Lux','Morgana','Lulu','Blitzcrank'],
   career:[{y:'2023', t:'신학과 롤 대회 <b>준우승</b> (서폿)'}],
   oath:'이번엔 민지영 이긴다'
 },
 {
-  team:'A', no:'04', slug:'gyuberic', name:'황규상', handle:'규버릭', tier:'emerald',
+  team:'A', slug:'gyuberic', name:'황규상', handle:'규버릭', tier:'emerald',
   pos:[{p:'adc',k:'pri',n:'주 라인'},{p:'sup',k:'pri',n:'딜 서폿'},
        {p:'mid',k:'sec',n:'야스오 · 요네만'},{p:'top',k:'sec',n:'베인만'}],
   limbs:['MissFortune','Ezreal','Lucian','Vayne'],
@@ -671,7 +663,7 @@ const PLAYERS = [
   oath:null
 },
 {
-  team:'A', no:'05', slug:'suyoungyun', name:'서영윤', handle:'수영윤', tier:'silver', captain:true,
+  team:'A', slug:'suyoungyun', name:'서영윤', handle:'수영윤', tier:'silver', captain:true,
   pos:[{p:'jgl',k:'pri',n:'주 라인'},{p:'sup',k:'sec',n:'보조 라인'}],
   limbs:['Khazix','XinZhao','Kayn','Ekko'],
   career:[
@@ -683,7 +675,7 @@ const PLAYERS = [
 },
 /* ---------- TEAM 지훈 ---------- */
 {
-  team:'B', no:'01', slug:'tft', name:'유성민', handle:'내가 좀더 잘할게 / 롤토체스 전용계정', short:'롤토체스 전용계정', tier:'emerald',
+  team:'B', slug:'tft', name:'유성민', handle:'내가 좀더 잘할게 / 롤토체스 전용계정', short:'롤토체스 전용계정', tier:'emerald',
   pos:[{p:'mid',k:'pri',n:'주 라인'},{p:'sup',k:'pri',n:'주 라인'},{p:'adc',k:'sec',n:'서브 라인'}],
   pool:['Naafiri','Galio','Ryze','Zoe'], poolLabel:'모스트 챔피언',
   poolNote:'그 외 이니시에이팅 서포터 챔피언 전반',
@@ -694,7 +686,7 @@ const PLAYERS = [
   oath:'신학과 롤대회 복수. 진성준 찢어버린다.'
 },
 {
-  team:'B', no:'02', slug:'kiin', name:'민지영', handle:'KIIN', tier:'iron', portrait:true,
+  team:'B', slug:'kiin', name:'민지영', handle:'KIIN', tier:'iron', portrait:true,
   pos:[{p:'sup',k:'pri',n:'주 라인'}],
   pool:['Nautilus','Lulu','Rakan','Neeko','Leona','Thresh','Seraphine','Lux'],
   poolLabel:'주 챔피언 · 챔프폭 넓음',
@@ -706,7 +698,7 @@ const PLAYERS = [
   oath:'지금 바로 뽑아주세요'
 },
 {
-  team:'B', no:'03', slug:'dontcommand', name:'김동욱', handle:'명령하지마라', tier:'gold',
+  team:'B', slug:'dontcommand', name:'김동욱', handle:'명령하지마라', tier:'gold',
   pos:[{p:'adc',k:'pri',n:'주 라인'},{p:'mid',k:'sec',n:'부 라인'},{p:'sup',k:'sec',n:'부부 라인'},
        {p:'jgl',k:'sec',n:'부부부 라인'},{p:'top',k:'sec',n:'부부부 라인'}],
   limbs:['Ezreal','Kaisa','Ashe','Caitlyn'],
@@ -719,7 +711,7 @@ const PLAYERS = [
   oath:'생존형 원딜. 거리 조절의 장인. 등촌동 구마유시. 출격 준비 완료.'
 },
 {
-  team:'B', no:'04', slug:'gospel', name:'박지훈', handle:'한손에복음들고', tier:'emerald', captain:true,
+  team:'B', slug:'gospel', name:'박지훈', handle:'한손에복음들고', tier:'emerald', captain:true,
   pos:[{p:'top',k:'pri',n:'주 라인'},{p:'sup',k:'pri',n:'주 라인'},
        {p:'jgl',k:'sec',n:'보조 라인'},{p:'adc',k:'sec',n:'보조 라인'},{p:'mid',k:'off',n:'미드 빼고'}],
   limbs:['Urgot','Thresh','Pantheon','Viego'],
@@ -732,7 +724,7 @@ const PLAYERS = [
   oath:'마음을 다하고 뜻을 다하여 임하겠습니다.'
 },
 {
-  team:'B', no:'05', slug:'sincheonji', name:'이동호', handle:'신천지사랑', tier:'gold',
+  team:'B', slug:'sincheonji', name:'이동호', handle:'신천지사랑', tier:'gold',
   pos:[{p:'sup',k:'pri',n:'주 라인'},{p:'jgl',k:'sec',n:'보조 라인'}],
   limbs:['Nautilus','Leona','Thresh','Blitzcrank'],
   career:[
@@ -750,6 +742,14 @@ const esc = s => String(s).replace(/&(?![a-z]+;|#)/g,'&amp;').replace(/</g,'&lt;
 const primary = p => (p.pos.find(x=>x.k==='pri')||p.pos[0]);
 const tag = p => p.short || p.handle;   // 닉네임 (좁은 자리에서는 축약형)
 
+/* 팀별 엔트리는 주 포지션 순서(탑 → 정글 → 미드 → 원딜 → 서폿)로 세우고
+   그 순서대로 01~05 등번호를 붙인다. 같은 포지션끼리는 원래 순서를 유지. */
+const POS_RANK = Object.fromEntries(POS_ORDER.map((c,i)=>[c,i]));
+const roster = t => PLAYERS.filter(p=>p.team===t)
+  .sort((a,b)=>POS_RANK[primary(a).p]-POS_RANK[primary(b).p]);
+const TEAM_A = roster('A'), TEAM_B = roster('B');
+[TEAM_A,TEAM_B].forEach(list=>list.forEach((p,i)=>{p.no=String(i+1).padStart(2,'0');}));
+
 /* -- match-up rows -- */
 function rosterRow(p){
   const pri = p.pos.filter(x=>x.k==='pri').slice(0,2);
@@ -762,15 +762,14 @@ function rosterRow(p){
     <span class="pos">${pri.map(x=>icon(x.p)).join('')}</span>
   </a>`;
 }
-document.getElementById('rosterA').innerHTML = PLAYERS.filter(p=>p.team==='A').map(rosterRow).join('');
-document.getElementById('rosterB').innerHTML = PLAYERS.filter(p=>p.team==='B').map(rosterRow).join('');
+document.getElementById('rosterA').innerHTML = TEAM_A.map(rosterRow).join('');
+document.getElementById('rosterB').innerHTML = TEAM_B.map(rosterRow).join('');
 
 /* -- champion tile -- */
-function champTile(key, limbLabel, q){
+function champTile(key, q){
   return `<div class="ch">
     <div class="fr"><img src="assets/champions/${key}.png" alt="${esc(CH[key]||key)}" loading="lazy" decoding="async" width="120" height="120"></div>
     <span class="kn">${esc(CH[key]||key)}${q?'?':''}</span>
-    ${limbLabel?`<span class="limb kr">${limbLabel}</span>`:''}
   </div>`;
 }
 
@@ -786,9 +785,9 @@ function posList(p){
 function profile(p, idx){
   const t = TIER[p.tier];
   const champBlock = p.limbs
-    ? `<div class="champs">${p.limbs.map((k,i)=>champTile(k, LIMB[i], p.limbQ&&p.limbQ[i])).join('')}</div>`
-    : `<div class="champs pool">${p.pool.map(k=>champTile(k,null,false)).join('')}</div>`;
-  const champHead = p.limbs ? 'Most Champions <em>오른팔 · 왼팔 · 오른다리 · 왼다리</em>'
+    ? `<div class="champs">${p.limbs.map((k,i)=>champTile(k, p.limbQ&&p.limbQ[i])).join('')}</div>`
+    : `<div class="champs pool">${p.pool.map(k=>champTile(k,false)).join('')}</div>`;
+  const champHead = p.limbs ? 'Most Champions <em>대표 챔피언</em>'
                             : `Champion Pool <em>${esc(p.poolLabel||'')}</em>`;
   return `<article class="pl ${p.team==='A'?'ta':'tb'} ${p.portrait?'pt':''} ${idx%2?'rev':''} rv" id="p-${p.slug}">
   <div class="pl-in">
@@ -831,8 +830,8 @@ function profile(p, idx){
   </div>
 </article>`;
 }
-document.getElementById('playersA').innerHTML = PLAYERS.filter(p=>p.team==='A').map(profile).join('');
-document.getElementById('playersB').innerHTML = PLAYERS.filter(p=>p.team==='B').map(profile).join('');
+document.getElementById('playersA').innerHTML = TEAM_A.map(profile).join('');
+document.getElementById('playersB').innerHTML = TEAM_B.map(profile).join('');
 
 /* -- line-up board -- */
 document.getElementById('boardRows').innerHTML = POS_ORDER.map(code=>{
