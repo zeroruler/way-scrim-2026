@@ -1,0 +1,885 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#06070A">
+<title>2026 WAY 신학과 내전 · TEAM 영윤 vs TEAM 지훈</title>
+<meta name="description" content="WAY 신학과 학생회 롤 내전 공식 로스터. TEAM 영윤 vs TEAM 지훈, 10인 선수 프로필.">
+<meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --bg:#06070A; --bg2:#0A0C12; --panel:#0E1119; --panel2:#131826;
+  --line:rgba(200,170,110,.22); --line-soft:rgba(255,255,255,.08);
+  --gold:#C8AA6E; --gold-lt:#F0E6D2; --gold-dk:#785A28;
+  --ink:#E9ECF2; --ink-2:#AEB6C6; --ink-3:#798194;
+  --A:#2E82E8; --A-lt:#7FBEFF; --A-dk:#12386E;   /* TEAM 영윤 */
+  --B:#E0374B; --B-lt:#FF8391; --B-dk:#6E141F;   /* TEAM 지훈 */
+  --dsp:'Anton',"Pretendard Variable",sans-serif;
+  --cond:'Barlow Condensed',"Pretendard Variable",sans-serif;
+  --kr:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+  --nav-h:52px;
+  --pad:clamp(16px,4.2vw,64px);
+  --maxw:1360px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 12px)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:var(--kr);font-size:16px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;overflow-x:clip;
+  word-break:keep-all;
+}
+img{max-width:100%;display:block}
+a,a *{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:2px}
+::selection{background:var(--gold);color:#000}
+
+/* film grain + scanline, fixed, non-interactive */
+.grain{position:fixed;inset:0;z-index:900;pointer-events:none;opacity:.5;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/><feColorMatrix type='saturate' values='0'/></filter><rect width='140' height='140' filter='url(%23n)' opacity='.32'/></svg>");
+  mix-blend-mode:overlay}
+.scan{position:fixed;inset:0;z-index:899;pointer-events:none;opacity:.35;
+  background:repeating-linear-gradient(to bottom,rgba(255,255,255,.035) 0 1px,transparent 1px 3px)}
+
+/* ============ TYPE PRIMITIVES ============ */
+.eyebrow{font-family:var(--cond);font-weight:600;letter-spacing:.34em;text-transform:uppercase;
+  font-size:clamp(10px,1.5vw,12px);color:var(--gold);display:flex;align-items:center;gap:10px;
+  flex-wrap:wrap;max-width:100%;justify-content:flex-start}
+.eyebrow>span{min-width:0}
+@media (max-width:520px){.eyebrow{letter-spacing:.18em;font-size:9.5px;gap:7px}.eyebrow::before{width:14px}}
+.eyebrow::before{content:"";width:22px;height:1px;background:var(--gold);flex:none}
+.dsp{font-family:var(--dsp);font-weight:400;letter-spacing:.01em;line-height:.88;text-transform:uppercase}
+.kdsp{font-family:var(--kr);font-weight:800;letter-spacing:-.035em;line-height:.95}
+.mono{font-family:var(--cond);font-weight:600;letter-spacing:.16em;text-transform:uppercase}
+
+/* ============ NAV ============ */
+.nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);z-index:800;
+  display:flex;align-items:center;gap:0;
+  background:rgba(6,7,10,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line-soft);
+  transform:translateY(-101%);transition:transform .38s cubic-bezier(.2,.8,.25,1)}
+.nav.show{transform:none}
+.nav-in{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 var(--pad);
+  display:flex;align-items:center;gap:14px;min-width:0}
+.nav-mark{font-family:var(--cond);font-weight:700;letter-spacing:.2em;font-size:13px;color:var(--gold-lt);flex:none}
+.nav-mark b{color:var(--gold)}
+.nav-links{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.nav-links::-webkit-scrollbar{display:none}
+.nav-links a{font-family:var(--cond);font-weight:600;letter-spacing:.14em;font-size:12px;text-transform:uppercase;
+  color:var(--ink-2);padding:14px 12px;white-space:nowrap;position:relative;min-height:44px;display:flex;align-items:center}
+.nav-links a:hover,.nav-links a:focus-visible{color:var(--gold-lt)}
+.nav-links a.a::after,.nav-links a.b::after{content:"";position:absolute;left:12px;right:12px;bottom:10px;height:2px;transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.nav-links a.a::after{background:var(--A-lt)}
+.nav-links a.b::after{background:var(--B-lt)}
+.nav-links a:hover::after{transform:none}
+@media (max-width:640px){ .nav-mark{font-size:11px;letter-spacing:.14em} .nav-links a{padding:14px 9px;font-size:11px} }
+
+/* ============ HERO ============ */
+.hero{position:relative;min-height:100svh;min-height:100dvh;display:flex;flex-direction:column;
+  overflow:hidden;isolation:isolate;padding:calc(env(safe-area-inset-top) + 18px) var(--pad) calc(env(safe-area-inset-bottom) + 18px)}
+.hero-bg{position:absolute;inset:0;z-index:-2}
+.hero-half{position:absolute;inset:0;overflow:hidden}
+.hero-half img{width:100%;height:100%;object-fit:cover}
+.hero-half::after{content:"";position:absolute;inset:0}
+.hero-half.a{inset:0 auto 0 0;width:62%;clip-path:polygon(0 0,91.9% 0,69.4% 100%,0 100%)}
+.hero-half.a img{object-position:36% 50%;filter:grayscale(.5) contrast(1.06) brightness(.38)}
+.hero-half.a::after{background:linear-gradient(115deg,rgba(18,56,110,.72),rgba(6,7,10,.35) 62%,rgba(6,7,10,.9))}
+.hero-half.b{inset:0 0 0 38%;width:62%;clip-path:polygon(30.7% 0,100% 0,100% 100%,8.1% 100%)}
+.hero-half.b img{object-position:56% 50%;filter:grayscale(.3) contrast(1.12) brightness(.78)}
+.hero-half.b::after{background:linear-gradient(245deg,rgba(110,20,31,.72),rgba(6,7,10,.35) 62%,rgba(6,7,10,.9))}
+.hero-seam{position:absolute;top:-6%;bottom:-6%;left:50%;width:2px;z-index:-1;
+  background:linear-gradient(to bottom,transparent,var(--gold) 22%,var(--gold-lt) 50%,var(--gold) 78%,transparent);
+  transform:translateX(-50%) rotate(7.6deg);opacity:.55;box-shadow:0 0 26px rgba(200,170,110,.55)}
+.hero-vig{position:absolute;inset:0;z-index:-1;
+  background:radial-gradient(42% 34% at 50% 52%,rgba(6,7,10,.7),transparent 74%),
+             linear-gradient(to bottom,rgba(6,7,10,.92),rgba(6,7,10,.62) 22%,rgba(6,7,10,.3) 44%,rgba(6,7,10,.72) 76%,var(--bg) 100%),
+             radial-gradient(126% 82% at 50% 44%,transparent 26%,rgba(6,7,10,.55) 72%,var(--bg) 100%)}
+@media (max-width:760px){
+  .hero-vig{background:radial-gradient(60% 22% at 50% 50%,rgba(6,7,10,.7),transparent 78%),
+    linear-gradient(to bottom,rgba(6,7,10,.94),rgba(6,7,10,.6) 20%,rgba(6,7,10,.28) 38%,rgba(6,7,10,.42) 62%,rgba(6,7,10,.88) 80%,var(--bg) 95%)}
+}
+
+.hero-top{display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center;padding-top:clamp(8px,3vh,28px)}
+.hero-top .eyebrow{justify-content:center}
+.hero-title{margin:0;display:flex;flex-direction:column;align-items:center;gap:clamp(2px,.7vw,10px);max-width:100%}
+.hero-title .yr{font-family:var(--dsp);font-weight:400;font-size:clamp(30px,6vw,74px);line-height:.9;
+  letter-spacing:.06em;color:transparent;-webkit-text-stroke:1.4px var(--gold)}
+.hero-title .ttl{font-family:var(--kr);font-weight:800;letter-spacing:-.045em;line-height:1;
+  font-size:clamp(26px,6.4vw,78px);color:var(--gold-lt);white-space:nowrap;
+  text-shadow:0 0 46px rgba(200,170,110,.3)}
+.hero-sub{font-family:var(--kr);font-weight:700;letter-spacing:-.02em;font-size:clamp(13px,2.4vw,20px);color:var(--ink-2)}
+
+.hero-vs{flex:1;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:clamp(10px,3vw,40px);
+  max-width:var(--maxw);width:100%;margin:0 auto;padding:clamp(14px,4vh,40px) 0}
+.side{display:flex;flex-direction:column;gap:8px;min-width:0}
+.side.a{align-items:flex-start;text-align:left}
+.side.b{align-items:flex-end;text-align:right}
+.side .med{width:clamp(46px,6.6vw,86px);aspect-ratio:1;border-radius:50%;padding:3px;flex:none;
+  background:rgba(0,0,0,.55);border:2px solid;box-shadow:0 8px 30px rgba(0,0,0,.6)}
+.side.a .med{border-color:var(--A);box-shadow:0 8px 30px rgba(0,0,0,.6),0 0 26px rgba(46,130,232,.4)}
+.side.b .med{border-color:var(--B);box-shadow:0 8px 30px rgba(0,0,0,.6),0 0 26px rgba(224,55,75,.4)}
+.side .med img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+@media (max-height:640px){.side .med{display:none}}
+.side .tag{font-family:var(--cond);font-weight:700;letter-spacing:.3em;font-size:clamp(10px,1.4vw,12px)}
+.side.a .tag{color:var(--A-lt)}
+.side.b .tag{color:var(--B-lt)}
+.side .nm{font-family:var(--kr);font-weight:800;letter-spacing:-.045em;
+  font-size:clamp(30px,7.4vw,78px);line-height:.92;color:#fff;
+  text-shadow:0 6px 40px rgba(0,0,0,.7)}
+.side.a .nm{text-shadow:0 6px 40px rgba(0,0,0,.7),0 0 60px rgba(46,130,232,.35)}
+.side.b .nm{text-shadow:0 6px 40px rgba(0,0,0,.7),0 0 60px rgba(224,55,75,.32)}
+.side .cap{font-family:var(--cond);font-weight:600;letter-spacing:.2em;font-size:11px;color:var(--ink-3)}
+.side .bar{width:clamp(50px,12vw,120px);height:3px}
+.side.a .bar{background:linear-gradient(90deg,var(--A-lt),transparent)}
+.side.b .bar{background:linear-gradient(270deg,var(--B-lt),transparent)}
+
+.vs{position:relative;display:grid;place-items:center;width:clamp(58px,13vw,130px);aspect-ratio:1;flex:none}
+.vs svg{position:absolute;inset:0;width:100%;height:100%;animation:spin 26s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.vs svg{animation:none}}
+.vs span{font-family:var(--dsp);font-size:clamp(22px,5vw,50px);color:var(--gold-lt);
+  text-shadow:0 0 26px rgba(200,170,110,.7);line-height:1}
+
+.hero-foot{display:flex;justify-content:center;align-items:center;gap:clamp(14px,4vw,40px);flex-wrap:wrap;
+  padding-bottom:clamp(34px,5.4vh,58px)}
+.stat{text-align:center}
+.stat b{display:block;font-family:var(--dsp);font-size:clamp(20px,3.4vw,34px);color:var(--gold-lt);line-height:1}
+.stat i{display:block;font-family:var(--cond);font-style:normal;font-weight:600;letter-spacing:.2em;
+  font-size:10px;color:var(--ink-3);text-transform:uppercase;margin-top:5px}
+.stat-div{width:1px;height:30px;background:var(--line)}
+.scroll-cue{position:absolute;left:50%;bottom:calc(env(safe-area-inset-bottom) + 8px);transform:translateX(-50%);
+  font-family:var(--cond);letter-spacing:.24em;font-size:9px;color:var(--ink-3);display:flex;flex-direction:row;
+  align-items:center;gap:8px;white-space:nowrap}
+@media (max-height:700px){.scroll-cue{display:none}}
+.scroll-cue::after{content:"";width:30px;height:1px;background:linear-gradient(90deg,var(--gold),transparent);animation:drop 1.9s ease-in-out infinite}
+@keyframes drop{0%,100%{opacity:.25;transform:scaleX(.5)}50%{opacity:1;transform:scaleX(1)}}
+@media (prefers-reduced-motion:reduce){.scroll-cue::after{animation:none}}
+
+@media (max-width:760px){
+  .hero-half.a{inset:0 0 auto 0;width:100%;height:56%;clip-path:polygon(0 0,100% 0,100% 80.4%,0 98.2%)}
+  .hero-half.a img{object-position:34% 50%}
+  .hero-half.b{inset:44% 0 0 0;width:100%;height:56%;clip-path:polygon(0 19.6%,100% 1.8%,100% 100%,0 100%)}
+  .hero-half.b img{object-position:88% 50%;filter:grayscale(.28) contrast(1.12) brightness(.92)}
+  .hero-seam{top:auto;bottom:auto;left:-6%;right:-6%;width:auto;height:2px;top:50%;
+    background:linear-gradient(to right,transparent,var(--gold) 22%,var(--gold-lt) 50%,var(--gold) 78%,transparent);
+    transform:translateY(-50%) rotate(-5.4deg)}
+  .hero-vs{grid-template-columns:1fr;grid-template-rows:1fr auto 1fr;justify-items:center;gap:clamp(6px,2vh,18px)}
+  .side.a,.side.b{align-items:center;text-align:center}
+  .side .bar{display:none}
+  .side.a{align-self:end}
+  .side.b{align-self:start}
+}
+
+/* ============ SECTION SHELL ============ */
+.sec{position:relative;padding:clamp(56px,9vw,120px) var(--pad)}
+.wrap{max-width:var(--maxw);margin:0 auto}
+.sec-head{display:flex;flex-direction:column;gap:12px;margin-bottom:clamp(24px,3.6vw,44px)}
+.sec-title{font-family:var(--dsp);font-size:clamp(28px,5.6vw,64px);line-height:.92;color:var(--gold-lt)}
+.sec-title small{display:block;font-family:var(--kr);font-weight:700;letter-spacing:-.03em;
+  font-size:clamp(13px,1.8vw,19px);color:var(--ink-3);margin-top:12px}
+.rule{height:1px;background:linear-gradient(90deg,var(--gold),rgba(200,170,110,.05));margin-top:4px}
+
+/* ============ MATCHUP ============ */
+.matchup{background:
+  radial-gradient(70% 100% at 50% 0%,rgba(200,170,110,.06),transparent 70%),
+  linear-gradient(180deg,var(--bg),var(--bg2))}
+.mgrid{display:grid;grid-template-columns:1fr auto 1fr;gap:clamp(10px,2.4vw,32px);align-items:start}
+.mcol{display:flex;flex-direction:column;gap:8px;min-width:0;padding:0 0 4px}
+.mcol.a{background:linear-gradient(180deg,rgba(46,130,232,.07),transparent 70%)}
+.mcol.b{background:linear-gradient(180deg,rgba(224,55,75,.07),transparent 70%)}
+.mhead{display:flex;align-items:center;gap:12px;padding-bottom:14px;border-bottom:1px solid var(--line-soft)}
+.mcol.b .mhead{flex-direction:row-reverse}
+.crest{width:clamp(42px,5.4vw,58px);aspect-ratio:1;flex:none;display:grid;place-items:center;position:relative}
+.crest svg{position:absolute;inset:0;width:100%;height:100%}
+.crest b{font-family:var(--dsp);font-size:clamp(15px,2vw,21px);line-height:1;position:relative}
+.mcol.a .crest b{color:var(--A-lt)}
+.mcol.b .crest b{color:var(--B-lt)}
+.mtitle{min-width:0}
+.mcol.b .mtitle{text-align:right}
+.mtitle strong{display:block;font-family:var(--kr);font-weight:800;letter-spacing:-.04em;
+  font-size:clamp(19px,3vw,32px);line-height:1.05;color:#fff}
+.mtitle span{font-family:var(--cond);font-weight:600;letter-spacing:.2em;font-size:11px}
+.mcol.a .mtitle span{color:var(--A-lt)}
+.mcol.b .mtitle span{color:var(--B-lt)}
+
+.mrow{display:flex;align-items:center;gap:12px;padding:10px 12px;min-height:70px;text-decoration:none;
+  background:linear-gradient(90deg,rgba(255,255,255,.045),rgba(255,255,255,.012));
+  border:1px solid var(--line-soft);border-left:3px solid var(--A);
+  transition:background .22s,transform .22s,border-color .22s;text-align:left;width:100%}
+.mcol.b .mrow{flex-direction:row-reverse;border-left:1px solid var(--line-soft);border-right:3px solid var(--B);
+  background:linear-gradient(270deg,rgba(255,255,255,.045),rgba(255,255,255,.012))}
+.mrow:hover,.mrow:focus-visible{background:rgba(200,170,110,.12);transform:translateX(5px)}
+.mcol.b .mrow:hover,.mcol.b .mrow:focus-visible{transform:translateX(-5px)}
+.mrow .no{font-family:var(--dsp);font-size:15px;color:var(--ink-3);flex:none;width:22px;text-align:center}
+.mrow img.pf{width:46px;height:46px;border-radius:50%;object-fit:cover;flex:none;
+  border:1px solid rgba(255,255,255,.2);background:#000}
+.mrow .who{min-width:0;flex:1}
+.mcol.b .mrow .who{text-align:right}
+.mrow .who b{display:block;font-weight:800;font-size:17px;letter-spacing:-.015em;line-height:1.25;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-decoration:none;color:#fff}
+.mrow .who i{display:block;font-style:normal;font-family:var(--kr);font-weight:500;letter-spacing:-.01em;
+  font-size:12.5px;color:var(--ink-3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:2px}
+.mrow .pos{display:flex;gap:5px;flex:none}
+.mrow .pos .picon{width:26px;height:26px;color:var(--gold-lt);
+  padding:3px;border:1px solid rgba(200,170,110,.4);background:rgba(200,170,110,.12)}
+.mrow .tierdot{flex:none;font-family:var(--cond);font-weight:700;letter-spacing:.1em;font-size:10px;
+  padding:3px 7px;border:1px solid currentColor;opacity:.9;white-space:nowrap}
+@media (max-width:480px){.mrow .tierdot{display:none}}
+
+.mvs{align-self:center;display:grid;place-items:center;gap:10px;padding-top:76px}
+.mvs .big{font-family:var(--dsp);font-size:clamp(28px,4.6vw,54px);color:var(--gold-lt);
+  text-shadow:0 0 30px rgba(200,170,110,.5);line-height:1}
+.mvs .ln{width:1px;height:clamp(60px,14vh,150px);background:linear-gradient(var(--gold),transparent)}
+.mvs .ln.up{background:linear-gradient(transparent,var(--gold))}
+
+@media (max-width:860px){
+  .mgrid{grid-template-columns:1fr;gap:0}
+  .mcol.b .mhead{flex-direction:row}
+  .mcol.b .mtitle{text-align:left}
+  .mcol.b .mrow{flex-direction:row;border-right:1px solid var(--line-soft);border-left:3px solid var(--B);
+    background:linear-gradient(90deg,rgba(255,255,255,.045),rgba(255,255,255,.012))}
+  .mcol.b .mrow .who{text-align:left}
+  .mcol.b .mrow:hover{transform:translateX(5px)}
+  .mvs{grid-template-columns:1fr auto 1fr;display:grid;align-items:center;width:100%;padding:22px 0;gap:14px}
+  .mvs .ln{width:100%;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
+  .mvs .ln.up{background:linear-gradient(90deg,var(--gold),transparent)}
+}
+
+/* ============ POSITION ICON ============ */
+.picon{display:inline-block;flex:none;color:var(--gold);vertical-align:middle}
+.picon svg{width:100%;height:100%;display:block;fill:currentColor}
+.picon .dim{opacity:.45}
+
+/* ============ TEAM BANNER ============ */
+.tband{position:relative;padding:clamp(30px,5vw,54px) var(--pad);overflow:hidden;
+  border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
+.tband.a{background:linear-gradient(100deg,rgba(18,56,110,.55),rgba(6,7,10,.2) 60%)}
+.tband.b{background:linear-gradient(260deg,rgba(110,20,31,.55),rgba(6,7,10,.2) 60%)}
+.tband .ghost{position:absolute;top:50%;transform:translateY(-50%);font-family:var(--dsp);
+  font-size:clamp(80px,17vw,220px);line-height:.8;color:transparent;
+  -webkit-text-stroke:1px rgba(255,255,255,.07);white-space:nowrap;pointer-events:none;user-select:none}
+.tband.a .ghost{left:-.06em}
+.tband.b .ghost{right:-.06em}
+.tband .in{position:relative;max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;gap:clamp(14px,3vw,28px)}
+.tband.b .in{flex-direction:row-reverse;text-align:right}
+.tband .in .crest{width:clamp(48px,6.4vw,72px)}
+.tband h2{margin:0;font-family:var(--kr);font-weight:800;letter-spacing:-.045em;
+  font-size:clamp(28px,6.4vw,66px);line-height:1;color:#fff}
+.tband .meta{font-family:var(--cond);font-weight:600;letter-spacing:.24em;font-size:clamp(10px,1.4vw,12px);
+  color:rgba(255,255,255,.55);margin-top:8px}
+.tband.a h2 span{color:var(--A-lt)}
+.tband.b h2 span{color:var(--B-lt)}
+
+/* ============ PLAYER PROFILE ============ */
+.players{display:flex;flex-direction:column}
+.pl{position:relative;padding:clamp(34px,5.5vw,72px) var(--pad);border-bottom:1px solid rgba(255,255,255,.055);scroll-margin-top:70px}
+.pl:last-child{border-bottom:0}
+.pl-in{max-width:var(--maxw);margin:0 auto;display:grid;
+  grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:clamp(20px,3.2vw,48px);align-items:start}
+.pl.pt .pl-in{grid-template-columns:minmax(0,.62fr) minmax(0,1fr)}
+.pl.rev .pl-in{direction:rtl}
+.pl.rev .pl-in>*{direction:ltr}
+
+/* card = shot + name plate */
+.pcard{display:flex;flex-direction:column;min-width:0}
+.shot{position:relative;overflow:hidden;background:#000;border:1px solid var(--line-soft);
+  box-shadow:0 26px 60px -28px rgba(0,0,0,.95)}
+.shot::after{content:"";position:absolute;inset:0;pointer-events:none;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
+.shot img{width:100%;aspect-ratio:1672/941;object-fit:cover;transition:transform .7s cubic-bezier(.2,.8,.25,1)}
+.shot.tall img{aspect-ratio:1127/1396}
+.pl:hover .shot img{transform:scale(1.03)}
+@media (prefers-reduced-motion:reduce){.pl:hover .shot img{transform:none}}
+.plate{display:flex;flex-direction:column;gap:12px;padding:16px 18px;
+  background:linear-gradient(100deg,rgba(255,255,255,.055),rgba(255,255,255,.015));
+  border:1px solid var(--line-soft);border-top:0}
+.pl.ta .plate{border-left:3px solid var(--A)}
+.pl.tb .plate{border-left:3px solid var(--B)}
+.shot .no{position:absolute;top:0;left:0;z-index:2;font-family:var(--dsp);
+  font-size:clamp(24px,3.6vw,44px);line-height:1;padding:10px 16px 12px;color:#fff;
+  background:var(--A);clip-path:polygon(0 0,100% 0,100% 62%,72% 100%,0 100%)}
+.pl.tb .shot .no{background:var(--B)}
+
+/* info panel */
+.info{display:flex;flex-direction:column;gap:clamp(16px,2vw,24px);min-width:0}
+.name-row{display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap}
+.name-row h3{margin:0;font-family:var(--kr);font-weight:800;letter-spacing:-.035em;
+  font-size:clamp(25px,4.4vw,44px);line-height:1.02;color:#fff;overflow-wrap:anywhere}
+.handle{font-family:var(--kr);font-weight:600;letter-spacing:-.02em;font-size:clamp(14px,1.8vw,17px);
+  padding-bottom:5px;white-space:nowrap}
+.pl.ta .handle{color:var(--A-lt)}
+.pl.tb .handle{color:var(--B-lt)}
+
+.badges{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.tier{display:inline-flex;align-items:center;gap:7px;padding:5px 12px 5px 9px;
+  border:1px solid currentColor;font-family:var(--cond);font-weight:700;letter-spacing:.16em;font-size:11px;
+  text-transform:uppercase;background:rgba(255,255,255,.03)}
+.tier .gem{width:9px;height:9px;background:currentColor;transform:rotate(45deg);flex:none}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:5px 11px;border:1px solid var(--line-soft);
+  background:rgba(255,255,255,.035);font-family:var(--cond);font-weight:600;letter-spacing:.13em;font-size:11px;
+  color:var(--ink-2);text-transform:uppercase}
+
+/* block */
+.blk{border-top:1px solid rgba(255,255,255,.09);padding-top:14px}
+.blk>h4{margin:0 0 12px;font-family:var(--cond);font-weight:700;letter-spacing:.26em;font-size:11px;
+  text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:9px}
+.blk>h4 em{font-style:normal;font-family:var(--kr);font-weight:600;letter-spacing:0;font-size:11px;color:var(--ink-3);text-transform:none}
+
+/* positions */
+.poslist{display:flex;flex-wrap:wrap;gap:8px}
+.pos-item{display:inline-flex;align-items:center;gap:9px;padding:8px 14px 8px 10px;min-height:46px;
+  border:1px solid var(--line-soft);background:rgba(255,255,255,.03);position:relative}
+.pos-item .picon{width:26px;height:26px}
+.pos-item .lb{display:flex;flex-direction:column;line-height:1.15}
+.pos-item .lb b{font-family:var(--cond);font-weight:700;letter-spacing:.14em;font-size:13.5px;text-transform:uppercase}
+.pos-item .lb i{font-style:normal;font-size:10.5px;color:var(--ink-3);letter-spacing:-.01em;margin-top:1px}
+.pos-item.pri{background:rgba(200,170,110,.13);border-color:rgba(200,170,110,.5)}
+.pos-item.pri .picon{color:var(--gold-lt)}
+.pos-item.pri .lb b{color:var(--gold-lt)}
+.pos-item.sec .picon{color:rgba(200,170,110,.62)}
+.pos-item.sec .lb b{color:var(--ink-2)}
+.pos-item.off{opacity:.42;border-style:dashed}
+.pos-item.off .picon{color:var(--ink-3)}
+.pos-item.off .lb b{color:var(--ink-3);text-decoration:line-through;text-decoration-thickness:1px}
+
+/* champions */
+.champs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.champs.pool{grid-template-columns:repeat(auto-fill,minmax(78px,1fr))}
+.ch{text-align:center;min-width:0}
+.ch .fr{position:relative;aspect-ratio:1;border:1px solid var(--line-soft);overflow:hidden;background:#0a0c10;
+  transition:border-color .25s,transform .25s}
+.ch .fr img{width:100%;height:100%;object-fit:cover}
+.ch .fr::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 22px rgba(0,0,0,.75)}
+.ch:hover .fr{border-color:var(--gold);transform:translateY(-3px)}
+.ch .kn{display:block;margin-top:7px;font-size:11.5px;font-weight:600;color:var(--ink-2);letter-spacing:-.02em;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ch .limb{display:block;font-family:var(--cond);font-weight:600;letter-spacing:.14em;font-size:9.5px;
+  color:var(--gold-dk);text-transform:uppercase;margin-top:2px}
+.ch .limb.kr{font-family:var(--kr);letter-spacing:.02em;font-size:10px;color:#96794a}
+.note{margin-top:10px;font-size:12.5px;color:var(--ink-3);line-height:1.55}
+
+/* career */
+.career{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.career li{display:grid;grid-template-columns:66px 1fr;gap:12px;padding:9px 0;
+  border-bottom:1px dashed rgba(255,255,255,.075);font-size:14px;color:var(--ink-2);line-height:1.5}
+.career li:last-child{border-bottom:0}
+.career .yr{font-family:var(--cond);font-weight:700;letter-spacing:.06em;font-size:13px;color:var(--gold);
+  padding-top:2px}
+.career .yr.none{color:var(--ink-3)}
+.career b{color:var(--ink);font-weight:600}
+
+/* quote */
+.oath{position:relative;padding:20px 20px 20px 50px;background:
+  linear-gradient(100deg,rgba(200,170,110,.12),rgba(255,255,255,.02));border-left:2px solid var(--gold)}
+.oath::before{content:"\201C";position:absolute;left:14px;top:10px;font-family:var(--dsp);font-size:46px;
+  color:var(--gold);opacity:.45;line-height:.7}
+.oath p{margin:0;font-size:clamp(15px,1.9vw,18px);font-weight:600;letter-spacing:-.025em;line-height:1.5;color:#fff}
+.oath span{display:block;margin-top:10px;font-family:var(--cond);font-weight:600;letter-spacing:.24em;
+  font-size:11px;color:var(--gold);opacity:.75;text-transform:uppercase}
+
+@media (max-width:900px){
+  .pl-in,.pl.pt .pl-in{grid-template-columns:1fr;gap:20px}
+  .pl.rev .pl-in{direction:ltr}
+  .shot.tall img{aspect-ratio:1127/1396}
+  .champs{grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+  .career li{grid-template-columns:56px 1fr;gap:10px;font-size:13.5px}
+}
+@media (max-width:400px){
+  .ch .kn{font-size:10.5px}
+  .champs{gap:6px}
+}
+
+/* ============ POSITION BOARD ============ */
+.board{background:linear-gradient(180deg,var(--bg2),var(--bg))}
+.brow{display:grid;grid-template-columns:210px 1fr;gap:clamp(14px,2.4vw,32px);align-items:center;
+  padding:clamp(16px,2.4vw,24px) 0;border-top:1px solid rgba(255,255,255,.08)}
+.brow:last-child{border-bottom:1px solid rgba(255,255,255,.08)}
+.blabel{display:flex;align-items:center;gap:14px}
+.blabel .picon{width:clamp(30px,3.6vw,40px);height:clamp(30px,3.6vw,40px);color:var(--gold)}
+.blabel .tx b{display:block;font-family:var(--dsp);font-size:clamp(16px,2.2vw,24px);color:var(--gold-lt);line-height:1}
+.blabel .tx i{display:block;font-style:normal;font-size:12px;color:var(--ink-3);margin-top:3px;letter-spacing:-.02em}
+.blabel .cnt{margin-left:auto;font-family:var(--cond);font-weight:700;letter-spacing:.1em;font-size:12px;
+  color:var(--gold);border:1px solid rgba(200,170,110,.35);padding:3px 9px;white-space:nowrap}
+@media (max-width:760px){.blabel .cnt{margin-left:12px}}
+.bchips{display:flex;flex-wrap:wrap;gap:8px}
+.bchip{display:inline-flex;align-items:center;gap:8px;padding:6px 12px 6px 6px;min-height:40px;
+  border:1px solid var(--line-soft);background:rgba(255,255,255,.03);transition:background .2s,transform .2s}
+.bchip:hover{background:rgba(200,170,110,.12);transform:translateY(-2px)}
+.bchip img{width:32px;height:32px;border-radius:50%;object-fit:cover;flex:none;border:1px solid rgba(255,255,255,.14)}
+.bchip .t{display:flex;flex-direction:column;line-height:1.2}
+.bchip .t b{font-size:14px;font-weight:700;letter-spacing:-.015em;white-space:nowrap}
+.bchip .t i{font-style:normal;font-size:10px;letter-spacing:.02em;color:var(--ink-3);white-space:nowrap}
+.bchip.ta{border-left:3px solid var(--A)}
+.bchip.tb{border-left:3px solid var(--B)}
+.bchip.sec{opacity:.72}
+.bchip.sec .t b{font-weight:600;color:var(--ink-2)}
+@media (max-width:760px){
+  .brow{grid-template-columns:1fr;gap:12px;align-items:start}
+  .bchips{gap:6px}
+  .bchip{padding:5px 10px 5px 5px}
+  .bchip img{width:26px;height:26px}
+}
+
+.legend{display:flex;flex-wrap:wrap;gap:16px;margin-top:26px;font-size:12px;color:var(--ink-3)}
+.legend span{display:inline-flex;align-items:center;gap:7px}
+.legend .sw{width:22px;height:10px;border:1px solid var(--line-soft);background:rgba(255,255,255,.03)}
+.legend .sw.p{background:rgba(200,170,110,.35);border-color:rgba(200,170,110,.6)}
+.legend .sw.s{opacity:.7}
+.legend .sw.x{border-style:dashed;opacity:.5}
+
+/* ============ FOOTER ============ */
+.foot{padding:clamp(44px,7vw,88px) var(--pad) calc(env(safe-area-inset-bottom) + 44px);
+  border-top:1px solid var(--line);text-align:center;background:var(--bg)}
+.foot .mk{font-family:var(--dsp);font-size:clamp(22px,4.4vw,46px);color:var(--gold-lt);line-height:1}
+.foot .sub{font-family:var(--cond);font-weight:600;letter-spacing:.3em;font-size:11px;color:var(--ink-3);
+  margin-top:14px;text-transform:uppercase}
+.foot .kr{margin-top:10px;font-size:13px;color:var(--ink-3);letter-spacing:-.02em}
+.foot .div{width:44px;height:1px;background:var(--gold);margin:24px auto}
+
+/* ============ REVEAL ============ */
+.rv{opacity:1}
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.8,.25,1),transform .7s cubic-bezier(.2,.8,.25,1)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div class="scan" aria-hidden="true"></div>
+
+<!-- ===== NAV ===== -->
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <div class="nav-mark">2026 <b>WAY</b> 신학과 내전</div>
+    <nav class="nav-links" aria-label="섹션 이동">
+      <a href="#matchup">대진</a>
+      <a href="#team-a" class="a">TEAM 영윤</a>
+      <a href="#team-b" class="b">TEAM 지훈</a>
+      <a href="#board">라인업</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="hero-half a"><img src="assets/banner/suyoungyun.jpg" alt=""></div>
+    <div class="hero-half b"><img src="assets/banner/gospel.jpg" alt=""></div>
+  </div>
+  <div class="hero-seam" aria-hidden="true"></div>
+  <div class="hero-vig" aria-hidden="true"></div>
+
+  <div class="hero-top">
+    <p class="eyebrow" style="margin:0"><span>WAY 신학과 학생회 · League of Legends 2026</span></p>
+    <h1 class="hero-title"><span class="yr">2026</span><span class="ttl">WAY 신학과 내전</span></h1>
+    <p class="hero-sub">5 vs 5 · 학생회 공식 내전 로스터</p>
+  </div>
+
+  <div class="hero-vs">
+    <div class="side a">
+      <span class="med"><img src="assets/face/suyoungyun.jpg" alt="" width="86" height="86"></span>
+      <span class="tag">Blue Side</span>
+      <span class="nm">TEAM<br>영윤</span>
+      <span class="cap">CAPTAIN 서영윤</span>
+      <span class="bar"></span>
+    </div>
+    <div class="vs" aria-hidden="true">
+      <svg viewBox="0 0 100 100"><polygon points="50,3 91,26.5 91,73.5 50,97 9,73.5 9,26.5" fill="none" stroke="#C8AA6E" stroke-width="1.2" opacity=".75"/><polygon points="50,12 83,31 83,69 50,88 17,69 17,31" fill="none" stroke="#C8AA6E" stroke-width=".6" opacity=".4"/></svg>
+      <span>VS</span>
+    </div>
+    <div class="side b">
+      <span class="med"><img src="assets/face/gospel.jpg" alt="" width="86" height="86"></span>
+      <span class="tag">Red Side</span>
+      <span class="nm">TEAM<br>지훈</span>
+      <span class="cap">CAPTAIN 박지훈</span>
+      <span class="bar"></span>
+    </div>
+  </div>
+
+  <div class="hero-foot">
+    <div class="stat"><b>10</b><i>Players</i></div>
+    <div class="stat-div"></div>
+    <div class="stat"><b>2</b><i>Teams</i></div>
+    <div class="stat-div"></div>
+    <div class="stat"><b>5</b><i>Positions</i></div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true">SCROLL</div>
+</section>
+
+<!-- ===== MATCHUP ===== -->
+<section class="sec matchup" id="matchup">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow" style="margin:0"><span>Match Up</span></p>
+      <h2 class="sec-title">ROSTER 5 vs 5<small>양 팀 엔트리 · 이름을 누르면 프로필로 이동합니다</small></h2>
+      <div class="rule"></div>
+    </div>
+    <div class="mgrid">
+      <div class="mcol a rv">
+        <div class="mhead">
+          <div class="crest"><svg viewBox="0 0 60 60" aria-hidden="true"><polygon points="30,2 55,16 55,44 30,58 5,44 5,16" fill="none" stroke="#2E82E8" stroke-width="1.6"/></svg><b>Y</b></div>
+          <div class="mtitle"><strong>TEAM 영윤</strong><span>Blue Side</span></div>
+        </div>
+        <div id="rosterA"></div>
+      </div>
+      <div class="mvs" aria-hidden="true"><span class="ln up"></span><span class="big">VS</span><span class="ln"></span></div>
+      <div class="mcol b rv">
+        <div class="mhead">
+          <div class="crest"><svg viewBox="0 0 60 60" aria-hidden="true"><polygon points="30,2 55,16 55,44 30,58 5,44 5,16" fill="none" stroke="#E0374B" stroke-width="1.6"/></svg><b>J</b></div>
+          <div class="mtitle"><strong>TEAM 지훈</strong><span>Red Side</span></div>
+        </div>
+        <div id="rosterB"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TEAM 영윤 ===== -->
+<div class="tband a" id="team-a">
+  <div class="ghost" aria-hidden="true">TEAM 영윤</div>
+  <div class="in">
+    <div class="crest"><svg viewBox="0 0 60 60" aria-hidden="true"><polygon points="30,2 55,16 55,44 30,58 5,44 5,16" fill="none" stroke="#7FBEFF" stroke-width="1.4"/></svg><b style="color:#7FBEFF;font-family:var(--dsp);font-size:22px">Y</b></div>
+    <div>
+      <h2>TEAM <span>영윤</span></h2>
+      <div class="meta">Blue Side · 5 Players · Captain 서영윤</div>
+    </div>
+  </div>
+</div>
+<div class="players" id="playersA"></div>
+
+<!-- ===== TEAM 지훈 ===== -->
+<div class="tband b" id="team-b">
+  <div class="ghost" aria-hidden="true">TEAM 지훈</div>
+  <div class="in">
+    <div class="crest"><svg viewBox="0 0 60 60" aria-hidden="true"><polygon points="30,2 55,16 55,44 30,58 5,44 5,16" fill="none" stroke="#FF8391" stroke-width="1.4"/></svg><b style="color:#FF8391;font-family:var(--dsp);font-size:22px">J</b></div>
+    <div>
+      <h2>TEAM <span>지훈</span></h2>
+      <div class="meta">Red Side · 5 Players · Captain 박지훈</div>
+    </div>
+  </div>
+</div>
+<div class="players" id="playersB"></div>
+
+<!-- ===== POSITION BOARD ===== -->
+<section class="sec board" id="board">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow" style="margin:0"><span>Line-up Board</span></p>
+      <h2 class="sec-title">포지션별 가용 인원<small>각 선수가 적어낸 주 라인 · 보조 라인 기준</small></h2>
+      <div class="rule"></div>
+    </div>
+    <div id="boardRows"></div>
+    <div class="legend rv">
+      <span><i class="sw p"></i> 주 라인</span>
+      <span><i class="sw s"></i> 보조 / 서브 라인</span>
+      <span><i class="sw x"></i> 불가</span>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="mk">2026 WAY 신학과 내전</div>
+  <div class="div"></div>
+  <div class="sub">Team 영윤 &nbsp;·&nbsp; VS &nbsp;·&nbsp; Team 지훈</div>
+  <p class="kr">WAY 신학과 학생회 · 선수 소개 및 프로필 이미지는 참가자 본인 제출 자료입니다.</p>
+</footer>
+
+<script>
+/* ================= POSITION ICONS (Riot champ-select set) ================= */
+const POS_SVG = {
+  top:'<path class="dim" fill-rule="evenodd" d="M21,14H14v7h7V14Zm5-3V26L11.014,26l-4,4H30V7.016Z"/><polygon points="4 4 4.003 28.045 9 23 9 9 23 9 28.045 4.003 4 4"/>',
+  jgl:'<path fill-rule="evenodd" d="M25,3c-2.128,3.3-5.147,6.851-6.966,11.469A42.373,42.373,0,0,1,20,20a27.7,27.7,0,0,1,1-3C21,12.023,22.856,8.277,25,3ZM13,20c-1.488-4.487-4.76-6.966-9-9,3.868,3.136,4.422,7.52,5,12l3.743,3.312C14.215,27.917,16.527,30.451,17,31c4.555-9.445-3.366-20.8-8-28C11.67,9.573,13.717,13.342,13,20Zm8,5a15.271,15.271,0,0,1,0,2l4-4c0.578-4.48,1.132-8.864,5-12C24.712,13.537,22.134,18.854,21,25Z"/>',
+  mid:'<path class="dim" fill-rule="evenodd" d="M30,12.968l-4.008,4L26,26H17l-4,4H30ZM16.979,8L21,4H4V20.977L8,17,8,8h8.981Z"/><polygon points="25 4 4 25 4 30 9 30 30 9 30 4 25 4"/>',
+  adc:'<path class="dim" fill-rule="evenodd" d="M13,20h7V13H13v7ZM4,4V26.984l3.955-4L8,8,22.986,8l4-4H4Z"/><polygon points="29.997 5.955 25 11 25 25 11 25 5.955 29.997 30 30 29.997 5.955"/>',
+  sup:'<path fill-rule="evenodd" d="M26,13c3.535,0,8-4,8-4H23l-3,3,2,7,5-2-3-4h2ZM22,5L20.827,3H13.062L12,5l5,6Zm-5,9-1-1L13,28l4,3,4-3L18,13ZM11,9H0s4.465,4,8,4h2L7,17l5,2,2-7Z"/>'
+};
+const POS_NAME = { top:{en:'TOP',kr:'탑'}, jgl:{en:'JUNGLE',kr:'정글'}, mid:{en:'MID',kr:'미드'},
+                   adc:{en:'BOT',kr:'원딜'}, sup:{en:'SUPPORT',kr:'서포터'} };
+const POS_ORDER = ['top','jgl','mid','adc','sup'];
+const icon = (p,cls='') => `<span class="picon ${cls}" role="img" aria-label="${POS_NAME[p].kr}"><svg viewBox="0 0 34 34" aria-hidden="true">${POS_SVG[p]}</svg></span>`;
+
+/* ================= TIERS ================= */
+const TIER = {
+  emerald:{kr:'에메랄드', en:'EMERALD', c:'#2FBD8A'},
+  gold:   {kr:'골드',     en:'GOLD',    c:'#D4A955'},
+  silver: {kr:'실버',     en:'SILVER',  c:'#9AA4AD'},
+  iron:   {kr:'아이언',   en:'IRON',    c:'#7A6A5F'},
+  none:   {kr:'랭크 없음', en:'UNRANKED',c:'#5C6373'}
+};
+
+/* ================= CHAMPION NAME MAP ================= */
+const CH = {
+  Mordekaiser:'모데카이저', Volibear:'볼리베어', Renekton:'레넥톤', Darius:'다리우스',
+  Naafiri:'나피리', Galio:'갈리오', Ryze:'라이즈', Zoe:'조이',
+  Nautilus:'노틸러스', Lulu:'룰루', Rakan:'라칸', Neeko:'니코', Leona:'레오나',
+  Thresh:'쓰레쉬', Seraphine:'세라핀', Lux:'럭스',
+  Zac:'자크', TahmKench:'탐 켄치', Jax:'잭스',
+  Ezreal:'이즈리얼', Kaisa:'카이사', Ashe:'애쉬', Caitlyn:'케이틀린',
+  Morgana:'모르가나', Blitzcrank:'블리츠크랭크',
+  Urgot:'우르곳', Pantheon:'판테온', Viego:'비에고',
+  MissFortune:'미스 포츈', Lucian:'루시안', Vayne:'베인', Yasuo:'야스오', Yone:'요네',
+  Khazix:'카직스', XinZhao:'신 짜오', Kayn:'케인', Ekko:'에코'
+};
+const LIMB = ['오른팔','왼팔','오른다리','왼다리'];
+
+/* ================= PLAYERS ================= */
+const PLAYERS = [
+/* ---------- TEAM 영윤 ---------- */
+{
+  team:'A', no:'01', slug:'mode', name:'진성준', handle:'모데하는사람', tier:'emerald',
+  pos:[{p:'top',k:'pri',n:'주 라인'}],
+  limbs:['Mordekaiser','Volibear','Renekton','Darius'],
+  career:[
+    {y:'2023', t:'신학과 롤 대회 <b>우승</b> (탑)'},
+    {y:'2023', t:'남긱 롤대회 <b>준우승</b> (탑)'},
+    {y:'2026', t:'WAY 신학과 내전 중 라인전 <b>&ldquo;무패&rdquo;</b>'}
+  ],
+  oath:'내 오른팔과 왼팔을 봉인하지 않는다면 탑은 불탈 것이다'
+},
+{
+  team:'A', no:'02', slug:'yoyohan', name:'오요한', handle:'요요한', tier:'silver',
+  pos:[{p:'top',k:'pri',n:'주 라인'}],
+  limbs:['Renekton','Zac','TahmKench','Jax'], limbQ:[false,false,false,true],
+  career:[{y:'2023', t:'신학과 롤 대회 <b>우승</b> (미드)'}],
+  oath:'진성준은 내가 잡는다.'
+},
+{
+  team:'A', no:'03', slug:'leebbang', name:'이상학', handle:'LEEBBANGBBOONG', tier:'none',
+  pos:[{p:'sup',k:'pri',n:'주 라인'}],
+  limbs:['Lux','Morgana','Lulu','Blitzcrank'],
+  career:[{y:'2023', t:'신학과 롤 대회 <b>준우승</b> (서폿)'}],
+  oath:'이번엔 민지영 이긴다'
+},
+{
+  team:'A', no:'04', slug:'gyuberic', name:'황규상', handle:'규버릭', tier:'emerald',
+  pos:[{p:'adc',k:'pri',n:'주 라인'},{p:'sup',k:'pri',n:'딜 서폿'},
+       {p:'mid',k:'sec',n:'야스오 · 요네만'},{p:'top',k:'sec',n:'베인만'}],
+  limbs:['MissFortune','Ezreal','Lucian','Vayne'],
+  career:[
+    {y:'2016', t:'부인중학교 3-2반 <b>정글러</b>로 반대항전 <b>준우승</b>'},
+    {y:'2016<br>~2020', t:'매 시즌 <b>키보드 워리어</b>로 활동. 골드를 찍었지만 하나님을 만나지 못해 채팅 제한으로 승리의 스킨 획득 실패 (5회)'},
+    {y:'2021<br>~현재', t:'신학과 재학 후 매 시즌 <b>명예 5레벨</b> 유지 중'}
+  ],
+  oath:null
+},
+{
+  team:'A', no:'05', slug:'suyoungyun', name:'서영윤', handle:'수영윤', tier:'silver', captain:true,
+  pos:[{p:'jgl',k:'pri',n:'주 라인'},{p:'sup',k:'sec',n:'보조 라인'}],
+  limbs:['Khazix','XinZhao','Kayn','Ekko'],
+  career:[
+    {y:'', t:'제주도 서귀포시 <b>욜로PC 솔로 랭크 무패</b> 기록 보유'},
+    {y:'', t:'북미 서버 2년간 플레이 경험 보유 <b>(무려 유학파)</b>'},
+    {y:'2026', t:'WAY 신학과 학생회 내전 참가 중 <b>카직스 블랙리스트 등재</b> (Neg)'}
+  ],
+  oath:'지훈이는 이기겠습니다'
+},
+/* ---------- TEAM 지훈 ---------- */
+{
+  team:'B', no:'01', slug:'tft', name:'유성민', handle:'내가 좀더 잘할게 / 롤토체스 전용계정', short:'롤토체스 전용계정', tier:'emerald',
+  pos:[{p:'mid',k:'pri',n:'주 라인'},{p:'sup',k:'pri',n:'주 라인'},{p:'adc',k:'sec',n:'서브 라인'}],
+  pool:['Naafiri','Galio','Ryze','Zoe'], poolLabel:'모스트 챔피언',
+  poolNote:'그 외 이니시에이팅 서포터 챔피언 전반',
+  career:[
+    {y:'2023', t:'신학과 롤 대회 <b>준우승</b> (탑)'},
+    {y:'2026', t:'WAY 신학과 내전 <b>원딜 · 미드 · 탑</b> 다양하게 소화'}
+  ],
+  oath:'신학과 롤대회 복수. 진성준 찢어버린다.'
+},
+{
+  team:'B', no:'02', slug:'kiin', name:'민지영', handle:'KIIN', tier:'iron', portrait:true,
+  pos:[{p:'sup',k:'pri',n:'주 라인'}],
+  pool:['Nautilus','Lulu','Rakan','Neeko','Leona','Thresh','Seraphine','Lux'],
+  poolLabel:'주 챔피언 · 챔프폭 넓음',
+  poolNote:'원딜 챔프에 따라 맞추는 순종적인 원딜 왕자님 전용 도구',
+  career:[
+    {y:'2026', t:'WAY 내전 <b>인기만점 원픽 서포터</b> (4D 효과까지)'},
+    {y:'', t:'승률 <b>매우매우 높음</b>'}
+  ],
+  oath:'지금 바로 뽑아주세요'
+},
+{
+  team:'B', no:'03', slug:'dontcommand', name:'김동욱', handle:'명령하지마라', tier:'gold',
+  pos:[{p:'adc',k:'pri',n:'주 라인'},{p:'mid',k:'sec',n:'부 라인'},{p:'sup',k:'sec',n:'부부 라인'},
+       {p:'jgl',k:'sec',n:'부부부 라인'},{p:'top',k:'sec',n:'부부부 라인'}],
+  limbs:['Ezreal','Kaisa','Ashe','Caitlyn'],
+  career:[
+    {y:'2026', t:'WAY 신학과 내전 <b>전승</b>'},
+    {y:'2026', t:'WAY 칼바람 <b>10만 딜</b> 후 음료 계산'},
+    {y:'2026', t:'WAY <b>최고의 아가리 파이터</b>'},
+    {y:'2021<br>~2026', t:'신학 21 <b>최고의 아가리 파이터</b>'}
+  ],
+  oath:'생존형 원딜. 거리 조절의 장인. 등촌동 구마유시. 출격 준비 완료.'
+},
+{
+  team:'B', no:'04', slug:'gospel', name:'박지훈', handle:'한손에복음들고', tier:'emerald', captain:true,
+  pos:[{p:'top',k:'pri',n:'주 라인'},{p:'sup',k:'pri',n:'주 라인'},
+       {p:'jgl',k:'sec',n:'보조 라인'},{p:'adc',k:'sec',n:'보조 라인'},{p:'mid',k:'off',n:'미드 빼고'}],
+  limbs:['Urgot','Thresh','Pantheon','Viego'],
+  career:[
+    {y:'2020', t:'검단중학교 [League of Legend Champions Geomdan 멸망전 Tournament] <b>주최 및 중계 · 총괄</b>'},
+    {y:'2021', t:'&lsquo;교연학원&rsquo; 내전 <b>MVP</b> (아가리 파이팅 부문)'},
+    {y:'2024', t:'<b>롤 접음</b>'},
+    {y:'2026', t:'생배 후 영윤이와 개강 날 &lsquo;욜로 PC 서귀포점&rsquo;에서 <b>플래티넘 달성</b>'}
+  ],
+  oath:'마음을 다하고 뜻을 다하여 임하겠습니다.'
+},
+{
+  team:'B', no:'05', slug:'sincheonji', name:'이동호', handle:'신천지사랑', tier:'gold',
+  pos:[{p:'sup',k:'pri',n:'주 라인'},{p:'jgl',k:'sec',n:'보조 라인'}],
+  limbs:['Nautilus','Leona','Thresh','Blitzcrank'],
+  career:[
+    {y:'', t:'현 계정 <b>채팅 정지 2회</b>'},
+    {y:'', t:'전 계정 <b>영구 정지 1회</b>'},
+    {y:'', t:'이만희 만세 × <b>5739번</b>'},
+    {y:'', t:'대전 신천지 맛디아지파배 롤 내전 <b>참여하고 싶음</b>'}
+  ],
+  oath:null
+}
+];
+
+/* ================= RENDER ================= */
+const esc = s => String(s).replace(/&(?![a-z]+;|#)/g,'&amp;').replace(/</g,'&lt;');
+const primary = p => (p.pos.find(x=>x.k==='pri')||p.pos[0]);
+const tag = p => p.short || p.handle;   // 닉네임 (좁은 자리에서는 축약형)
+
+/* -- match-up rows -- */
+function rosterRow(p){
+  const pri = p.pos.filter(x=>x.k==='pri').slice(0,2);
+  const t = TIER[p.tier];
+  return `<a class="mrow" href="#p-${p.slug}" aria-label="${esc(p.name)} 프로필 보기">
+    <span class="no">${p.no}</span>
+    <img class="pf" src="assets/face/${p.slug}.jpg" alt="" loading="lazy" decoding="async" width="46" height="46">
+    <span class="who"><b>${esc(tag(p))}${p.captain?' <span style="font-family:var(--cond);letter-spacing:.14em;font-size:10px;color:var(--gold);font-weight:700">CAPTAIN</span>':''}</b><i>${esc(p.name)}</i></span>
+    <span class="tierdot" style="color:${t.c}">${t.en}</span>
+    <span class="pos">${pri.map(x=>icon(x.p)).join('')}</span>
+  </a>`;
+}
+document.getElementById('rosterA').innerHTML = PLAYERS.filter(p=>p.team==='A').map(rosterRow).join('');
+document.getElementById('rosterB').innerHTML = PLAYERS.filter(p=>p.team==='B').map(rosterRow).join('');
+
+/* -- champion tile -- */
+function champTile(key, limbLabel, q){
+  return `<div class="ch">
+    <div class="fr"><img src="assets/champions/${key}.png" alt="${esc(CH[key]||key)}" loading="lazy" decoding="async" width="120" height="120"></div>
+    <span class="kn">${esc(CH[key]||key)}${q?'?':''}</span>
+    ${limbLabel?`<span class="limb kr">${limbLabel}</span>`:''}
+  </div>`;
+}
+
+/* -- position list -- */
+function posList(p){
+  return `<div class="poslist">${p.pos.map(x=>`
+    <div class="pos-item ${x.k}">${icon(x.p)}
+      <span class="lb"><b>${POS_NAME[x.p].en}</b><i>${POS_NAME[x.p].kr} · ${esc(x.n)}</i></span>
+    </div>`).join('')}</div>`;
+}
+
+/* -- full profile -- */
+function profile(p, idx){
+  const t = TIER[p.tier];
+  const champBlock = p.limbs
+    ? `<div class="champs">${p.limbs.map((k,i)=>champTile(k, LIMB[i], p.limbQ&&p.limbQ[i])).join('')}</div>`
+    : `<div class="champs pool">${p.pool.map(k=>champTile(k,null,false)).join('')}</div>`;
+  const champHead = p.limbs ? 'Most Champions <em>오른팔 · 왼팔 · 오른다리 · 왼다리</em>'
+                            : `Champion Pool <em>${esc(p.poolLabel||'')}</em>`;
+  return `<article class="pl ${p.team==='A'?'ta':'tb'} ${p.portrait?'pt':''} ${idx%2?'rev':''} rv" id="p-${p.slug}">
+  <div class="pl-in">
+    <div class="pcard">
+      <figure class="shot ${p.portrait?'tall':''}" style="margin:0">
+        <span class="no">${p.no}</span>
+        <img src="assets/banner/${p.slug}.jpg" alt="${esc(p.name)} 선수 프로필 이미지" loading="lazy" decoding="async">
+      </figure>
+      <div class="plate">
+        <div class="name-row">
+          <h3>${esc(p.handle)}</h3>
+          <span class="handle">${esc(p.name)}</span>
+        </div>
+        <div class="badges">
+          <span class="tier" style="color:${t.c}"><i class="gem"></i>${t.en} <span style="opacity:.75;letter-spacing:0;font-family:var(--kr);font-weight:600">${t.kr}</span></span>
+          ${p.captain?'<span class="chip" style="color:var(--gold);border-color:rgba(200,170,110,.5)">CAPTAIN</span>':''}
+          <span class="chip">${p.team==='A'?'TEAM 영윤':'TEAM 지훈'}</span>
+        </div>
+      </div>
+    </div>
+    <div class="info">
+      <div class="blk" style="border-top:0;padding-top:0">
+        <h4>Position <em>포지션</em></h4>
+        ${posList(p)}
+      </div>
+
+      <div class="blk">
+        <h4>${champHead}</h4>
+        ${champBlock}
+        ${p.poolNote?`<p class="note">${esc(p.poolNote)}</p>`:''}
+      </div>
+
+      <div class="blk">
+        <h4>Career <em>경력</em></h4>
+        <ul class="career">${p.career.map(c=>`<li><span class="yr ${c.y?'':'none'}">${c.y||'—'}</span><span>${c.t}</span></li>`).join('')}</ul>
+      </div>
+
+      ${p.oath?`<div class="oath"><p>${esc(p.oath)}</p><span>각오 · Oath</span></div>`:''}
+    </div>
+  </div>
+</article>`;
+}
+document.getElementById('playersA').innerHTML = PLAYERS.filter(p=>p.team==='A').map(profile).join('');
+document.getElementById('playersB').innerHTML = PLAYERS.filter(p=>p.team==='B').map(profile).join('');
+
+/* -- line-up board -- */
+document.getElementById('boardRows').innerHTML = POS_ORDER.map(code=>{
+  const entries = [];
+  PLAYERS.forEach(p=>{
+    const hit = p.pos.find(x=>x.p===code);
+    if(hit) entries.push({p, k:hit.k, n:hit.n});
+  });
+  entries.sort((a,b)=>({pri:0,sec:1,off:2}[a.k])-({pri:0,sec:1,off:2}[b.k]));
+  const chips = entries.map(e=>`<a class="bchip ${e.p.team==='A'?'ta':'tb'} ${e.k==='pri'?'':'sec'}" href="#p-${e.p.slug}"
+      style="${e.k==='pri'?'background:rgba(200,170,110,.13);border-color:rgba(200,170,110,.42);':''}${e.k==='off'?'opacity:.4;border-style:dashed;':''}">
+      <img src="assets/face/${e.p.slug}.jpg" alt="" loading="lazy" decoding="async" width="28" height="28">
+      <span class="t"><b style="${e.k==='off'?'text-decoration:line-through':''}">${esc(tag(e.p))}</b><i>${esc(e.n)}</i></span>
+    </a>`).join('');
+  const nPri = entries.filter(e=>e.k==='pri').length;
+  return `<div class="brow rv">
+    <div class="blabel">${icon(code)}<span class="tx"><b>${POS_NAME[code].en}</b><i>${POS_NAME[code].kr}</i></span><span class="cnt">주 ${nPri}명</span></div>
+    <div class="bchips">${chips}</div>
+  </div>`;
+}).join('');
+
+/* ================= BEHAVIOUR ================= */
+const nav = document.getElementById('nav');
+const hero = document.getElementById('top');
+new IntersectionObserver(([e])=>nav.classList.toggle('show', !e.isIntersecting), {threshold:0, rootMargin:'-60px 0px 0px 0px'}).observe(hero);
+
+const reveal = el => el.classList.add('in');
+if ('IntersectionObserver' in window) document.documentElement.classList.add('js');
+const io = new IntersectionObserver((es,o)=>{
+  es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); o.unobserve(e.target); } });
+},{threshold:.08, rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+/* safety net: nothing may stay invisible if the observer never fires */
+addEventListener('load',()=>setTimeout(()=>document.querySelectorAll('.rv:not(.in)').forEach(el=>{
+  if(el.getBoundingClientRect().top < innerHeight) reveal(el);
+}),1200));
+
+const links = [...document.querySelectorAll('.nav-links a')];
+const targets = links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+const navIO = new IntersectionObserver(es=>{
+  es.forEach(e=>{
+    if(!e.isIntersecting) return;
+    const i = targets.indexOf(e.target);
+    links.forEach((l,j)=>l.style.color = j===i ? 'var(--gold-lt)' : '');
+  });
+},{rootMargin:'-45% 0px -50% 0px'});
+targets.forEach(t=>navIO.observe(t));
+</script>
+</body>
+</html>
