@@ -178,8 +178,6 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .wrap{max-width:var(--maxw);margin:0 auto}
 .sec-head{display:flex;flex-direction:column;gap:12px;margin-bottom:clamp(24px,3.6vw,44px)}
 .sec-title{font-family:var(--dsp);font-size:clamp(28px,5.6vw,64px);line-height:.92;color:var(--gold-lt)}
-.sec-title small{display:block;font-family:var(--kr);font-weight:700;letter-spacing:-.03em;
-  font-size:clamp(13px,1.8vw,19px);color:var(--ink-3);margin-top:12px}
 .rule{height:1px;background:linear-gradient(90deg,var(--gold),rgba(200,170,110,.05));margin-top:4px}
 
 /* ============ MATCHUP ============ */
@@ -389,48 +387,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .champs{gap:6px}
 }
 
-/* ============ POSITION BOARD ============ */
-.board{background:linear-gradient(180deg,var(--bg2),var(--bg))}
-.brow{display:grid;grid-template-columns:210px 1fr;gap:clamp(14px,2.4vw,32px);align-items:center;
-  padding:clamp(16px,2.4vw,24px) 0;border-top:1px solid rgba(255,255,255,.08)}
-.brow:last-child{border-bottom:1px solid rgba(255,255,255,.08)}
-.blabel{display:flex;align-items:center;gap:14px}
-.blabel .picon{width:clamp(30px,3.6vw,40px);height:clamp(30px,3.6vw,40px);color:var(--gold)}
-.blabel .tx b{display:block;font-family:var(--dsp);font-size:clamp(16px,2.2vw,24px);color:var(--gold-lt);line-height:1}
-.blabel .tx i{display:block;font-style:normal;font-size:12px;color:var(--ink-3);margin-top:3px;letter-spacing:-.02em}
-.blabel .cnt{margin-left:auto;font-family:var(--cond);font-weight:700;letter-spacing:.1em;font-size:12px;
-  color:var(--gold);border:1px solid rgba(200,170,110,.35);padding:3px 9px;white-space:nowrap}
-@media (max-width:760px){.blabel .cnt{margin-left:12px}}
-.bchips{display:flex;flex-wrap:wrap;gap:8px}
-.bchip{display:inline-flex;align-items:center;gap:8px;padding:6px 12px 6px 6px;min-height:40px;
-  border:1px solid var(--line-soft);background:rgba(255,255,255,.03);transition:background .2s,transform .2s}
-.bchip:hover{background:rgba(200,170,110,.12);transform:translateY(-2px)}
-.bchip img{width:32px;height:32px;border-radius:50%;object-fit:cover;flex:none;border:1px solid rgba(255,255,255,.14)}
-.bchip .t{display:flex;flex-direction:column;line-height:1.2}
-.bchip .t b{font-size:14px;font-weight:700;letter-spacing:-.015em;white-space:nowrap}
-.bchip .t i{font-style:normal;font-size:10px;letter-spacing:.02em;color:var(--ink-3);white-space:nowrap}
-.bchip.ta{border-left:3px solid var(--A)}
-.bchip.tb{border-left:3px solid var(--B)}
-.bchip.sec{opacity:.72}
-.bchip.sec .t b{font-weight:600;color:var(--ink-2)}
-@media (max-width:760px){
-  .brow{grid-template-columns:1fr;gap:12px;align-items:start}
-  .bchips{gap:6px}
-  .bchip{padding:5px 10px 5px 5px}
-  .bchip img{width:26px;height:26px}
-}
-
-.legend{display:flex;flex-wrap:wrap;gap:16px;margin-top:26px;font-size:12px;color:var(--ink-3)}
-.legend span{display:inline-flex;align-items:center;gap:7px}
-.legend .sw{width:22px;height:10px;border:1px solid var(--line-soft);background:rgba(255,255,255,.03)}
-.legend .sw.p{background:rgba(200,170,110,.35);border-color:rgba(200,170,110,.6)}
-.legend .sw.s{opacity:.7}
-.legend .sw.x{border-style:dashed;opacity:.5}
-
 /* ============ FOOTER ============ */
 .foot{padding:clamp(44px,7vw,88px) var(--pad) calc(env(safe-area-inset-bottom) + 44px);
   border-top:1px solid var(--line);text-align:center;background:var(--bg)}
-.foot .mk{font-family:var(--dsp);font-size:clamp(22px,4.4vw,46px);color:var(--gold-lt);line-height:1}
+.foot .mark{width:clamp(54px,7.4vw,76px);height:auto;margin:0 auto;opacity:.62}
 .foot .sub{font-family:var(--cond);font-weight:600;letter-spacing:.3em;font-size:11px;color:var(--ink-3);
   margin-top:14px;text-transform:uppercase}
 .foot .kr{margin-top:10px;font-size:13px;color:var(--ink-3);letter-spacing:-.02em}
@@ -455,7 +415,6 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
       <a href="#matchup">대진</a>
       <a href="#team-a" class="a">TEAM 영윤</a>
       <a href="#team-b" class="b">TEAM 지훈</a>
-      <a href="#board">라인업</a>
     </nav>
   </div>
 </header>
@@ -561,25 +520,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 </div>
 <div class="players" id="playersB"></div>
 
-<!-- ===== POSITION BOARD ===== -->
-<section class="sec board" id="board">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <p class="eyebrow" style="margin:0"><span>Line-up Board</span></p>
-      <h2 class="sec-title">포지션별 가용 인원<small>각 선수가 적어낸 주 라인 · 보조 라인 기준</small></h2>
-      <div class="rule"></div>
-    </div>
-    <div id="boardRows"></div>
-    <div class="legend rv">
-      <span><i class="sw p"></i> 주 라인</span>
-      <span><i class="sw s"></i> 보조 / 서브 라인</span>
-      <span><i class="sw x"></i> 불가</span>
-    </div>
-  </div>
-</section>
-
-<footer class="foot">
-  <div class="mk">2026 WAY 내전</div>
+<footer class="foot" id="foot">
+  <img class="mark" src="assets/way-mark.png" alt="WAY 신학과 학생회" width="52" height="52" loading="lazy" decoding="async">
   <div class="div"></div>
   <div class="sub">Team 영윤 &nbsp;·&nbsp; VS &nbsp;·&nbsp; Team 지훈</div>
   <p class="kr">WAY 신학과 학생회 · 선수 소개 및 프로필 이미지는 참가자 본인 제출 자료입니다.</p>
@@ -716,7 +658,7 @@ const PLAYERS = [
        {p:'jgl',k:'sec',n:'보조 라인'},{p:'adc',k:'sec',n:'보조 라인'},{p:'mid',k:'off',n:'미드 빼고'}],
   limbs:['Urgot','Thresh','Pantheon','Viego'],
   career:[
-    {y:'2020', t:'검단중학교 [League of Legend Champions Geomdan 멸망전 Tournament] <b>주최 및 중계 · 총괄</b>'},
+    {y:'2020', t:'검단중학교 [League of Legends Champions Geomdan 멸망전 Tournament] <b>주최 및 중계 · 총괄</b>'},
     {y:'2021', t:'&lsquo;교연학원&rsquo; 내전 <b>MVP</b> (아가리 파이팅 부문)'},
     {y:'2024', t:'<b>롤 접음</b>'},
     {y:'2026', t:'생배 후 영윤이와 개강 날 &lsquo;욜로 PC 서귀포점&rsquo;에서 <b>플래티넘 달성</b>'}
@@ -832,26 +774,6 @@ function profile(p, idx){
 }
 document.getElementById('playersA').innerHTML = TEAM_A.map(profile).join('');
 document.getElementById('playersB').innerHTML = TEAM_B.map(profile).join('');
-
-/* -- line-up board -- */
-document.getElementById('boardRows').innerHTML = POS_ORDER.map(code=>{
-  const entries = [];
-  PLAYERS.forEach(p=>{
-    const hit = p.pos.find(x=>x.p===code);
-    if(hit) entries.push({p, k:hit.k, n:hit.n});
-  });
-  entries.sort((a,b)=>({pri:0,sec:1,off:2}[a.k])-({pri:0,sec:1,off:2}[b.k]));
-  const chips = entries.map(e=>`<a class="bchip ${e.p.team==='A'?'ta':'tb'} ${e.k==='pri'?'':'sec'}" href="#p-${e.p.slug}"
-      style="${e.k==='pri'?'background:rgba(200,170,110,.13);border-color:rgba(200,170,110,.42);':''}${e.k==='off'?'opacity:.4;border-style:dashed;':''}">
-      <img src="assets/face/${e.p.slug}.jpg" alt="" loading="lazy" decoding="async" width="28" height="28">
-      <span class="t"><b style="${e.k==='off'?'text-decoration:line-through':''}">${esc(tag(e.p))}</b><i>${esc(e.n)}</i></span>
-    </a>`).join('');
-  const nPri = entries.filter(e=>e.k==='pri').length;
-  return `<div class="brow rv">
-    <div class="blabel">${icon(code)}<span class="tx"><b>${POS_NAME[code].en}</b><i>${POS_NAME[code].kr}</i></span><span class="cnt">주 ${nPri}명</span></div>
-    <div class="bchips">${chips}</div>
-  </div>`;
-}).join('');
 
 /* ================= BEHAVIOUR ================= */
 const nav = document.getElementById('nav');
