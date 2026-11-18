@@ -413,8 +413,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 <!-- ===== HERO ===== -->
 <section class="hero" id="top">
   <div class="hero-bg" aria-hidden="true">
-    <div class="hero-half a"><img src="assets/banner/leebbang.jpg" alt=""></div>
-    <div class="hero-half b"><img src="assets/banner/kiin.jpg" alt=""></div>
+    <div class="hero-half a"><img src="assets/hero/leebbang.jpg" alt=""></div>
+    <div class="hero-half b"><img src="assets/hero/kiin.jpg" alt=""></div>
   </div>
   <div class="hero-seam" aria-hidden="true"></div>
   <div class="hero-vig" aria-hidden="true"></div>
@@ -588,11 +588,11 @@ const PLAYERS = [
        {p:'jgl',k:'sec',n:'부부부 라인'},{p:'top',k:'sec',n:'부부부 라인'}],
   limbs:['Ezreal','Kaisa','Ashe','Caitlyn'],
   career:[
-    {y:'2026', t:'WAYLDS 26 <b>우승</b>'},
     {y:'2026', t:'WAY 신학과 내전 <b>전승</b>'},
     {y:'2026', t:'WAY 칼바람 <b>10만 딜</b> 후 음료 계산'},
     {y:'2026', t:'WAY <b>최고의 아가리 파이터</b>'},
-    {y:'2021<br>~2026', t:'신학 21 <b>최고의 아가리 파이터</b>'}
+    {y:'2021<br>~2026', t:'신학 21 <b>최고의 아가리 파이터</b>'},
+    {y:'2026', t:'[League of Legends Way Championship 2026] <b>우승</b>'}
   ]
 },
 {
@@ -601,11 +601,11 @@ const PLAYERS = [
        {p:'jgl',k:'sec',n:'보조 라인'},{p:'mid',k:'sec',n:'보조 라인'},{p:'adc',k:'off',n:'원딜 빼고'}],
   limbs:['Urgot','Thresh','Pantheon','Viego'],
   career:[
-    {y:'2026', t:'WAYLDS 26 <b>우승</b>'},
     {y:'2020', t:'검단중학교 [League of Legends Champions Geomdan 멸망전 Tournament] <b>주최 및 중계 · 총괄</b>'},
     {y:'2021', t:'&lsquo;교연학원&rsquo; 내전 <b>MVP</b> (아가리 파이팅 부문)'},
     {y:'2024', t:'<b>롤 접음</b>'},
-    {y:'2026', t:'생배 후 영윤이와 개강 날 &lsquo;욜로 PC 서귀포점&rsquo;에서 <b>플래티넘 달성</b>'}
+    {y:'2026', t:'생배 후 영윤이와 개강 날 &lsquo;욜로 PC 서귀포점&rsquo;에서 <b>플래티넘 달성</b>'},
+    {y:'2026', t:'[League of Legends Way Championship 2026] <b>우승</b>'}
   ]
 },
 /* ---------- TEAM 지영 ---------- */
@@ -636,21 +636,21 @@ const PLAYERS = [
   pool:['Naafiri','Galio','Ryze','Zoe'], poolLabel:'모스트 챔피언',
   poolNote:'그 외 이니시에이팅 서포터 챔피언 전반',
   career:[
-    {y:'2026', t:'WAYLDS 26 <b>우승</b>'},
     {y:'2023', t:'신학과 롤 대회 <b>준우승</b> (탑)'},
-    {y:'2026', t:'WAY 신학과 내전 <b>원딜 · 미드 · 탑</b> 다양하게 소화'}
+    {y:'2026', t:'WAY 신학과 내전 <b>원딜 · 미드 · 탑</b> 다양하게 소화'},
+    {y:'2026', t:'[League of Legends Way Championship 2026] <b>우승</b>'}
   ]
 },
 {
-  team:'B', slug:'kiin', name:'민지영', handle:'KIIN', tier:'iron', portrait:true, captain:true,
+  team:'B', slug:'kiin', name:'민지영', handle:'KIIN', tier:'iron', captain:true,
   pos:[{p:'sup',k:'pri',n:'주 라인'}],
   pool:['Nautilus','Lulu','Rakan','Neeko','Leona','Thresh','Seraphine','Lux'],
   poolLabel:'주 챔피언 · 챔프폭 넓음',
   poolNote:'원딜 챔프에 따라 맞추는 순종적인 원딜 왕자님 전용 도구',
   career:[
-    {y:'2026', t:'WAYLDS 26 <b>우승</b>'},
     {y:'2026', t:'WAY 내전 <b>인기만점 원픽 서포터</b> (4D 효과까지)'},
-    {y:'', t:'승률 <b>매우매우 높음</b>'}
+    {y:'', t:'승률 <b>매우매우 높음</b>'},
+    {y:'2026', t:'[League of Legends Way Championship 2026] <b>우승</b>'}
   ]
 },
 {
@@ -658,11 +658,11 @@ const PLAYERS = [
   pos:[{p:'sup',k:'pri',n:'주 라인'},{p:'jgl',k:'sec',n:'보조 라인'}],
   limbs:['Nautilus','Leona','Thresh','Blitzcrank'],
   career:[
-    {y:'2026', t:'WAYLDS 26 <b>우승</b>'},
     {y:'', t:'현 계정 <b>채팅 정지 2회</b>'},
     {y:'', t:'전 계정 <b>영구 정지 1회</b>'},
     {y:'', t:'이만희 만세 × <b>5739번</b>'},
-    {y:'', t:'대전 신천지 맛디아지파배 롤 내전 <b>참여하고 싶음</b>'}
+    {y:'', t:'대전 신천지 맛디아지파배 롤 내전 <b>참여하고 싶음</b>'},
+    {y:'2026', t:'[League of Legends Way Championship 2026] <b>우승</b>'}
   ]
 }
 ];
@@ -711,6 +711,12 @@ function posList(p){
     </div>`).join('')}</div>`;
 }
 
+/* -- 경력은 연도순(위 → 아래로 갈수록 최신). 연도 없는 항목은 맨 위,
+      기간('2016~2020')은 시작 연도 기준, 같은 연도끼리는 원래 순서 유지 -- */
+const careerYear = c => { const m = String(c.y||'').match(/\d{4}/); return m ? +m[0] : -Infinity; };
+const byYear = list => list.map((c,i)=>[c,i])
+  .sort((a,b)=>careerYear(a[0])-careerYear(b[0]) || a[1]-b[1]).map(x=>x[0]);
+
 /* -- full profile -- */
 function profile(p, idx){
   const t = TIER[p.tier];
@@ -752,7 +758,7 @@ function profile(p, idx){
 
       <div class="blk">
         <h4>Career <em>경력</em></h4>
-        <ul class="career">${p.career.map(c=>`<li><span class="yr ${c.y?'':'none'}">${c.y||'—'}</span><span>${c.t}</span></li>`).join('')}</ul>
+        <ul class="career">${byYear(p.career).map(c=>`<li><span class="yr ${c.y?'':'none'}">${c.y||'—'}</span><span>${c.t}</span></li>`).join('')}</ul>
       </div>
 
     </div>
