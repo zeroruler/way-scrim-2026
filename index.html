@@ -366,15 +366,6 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .career .yr.none{color:var(--ink-3)}
 .career b{color:var(--ink);font-weight:600}
 
-/* quote */
-.oath{position:relative;padding:20px 20px 20px 50px;background:
-  linear-gradient(100deg,rgba(200,170,110,.12),rgba(255,255,255,.02));border-left:2px solid var(--gold)}
-.oath::before{content:"\201C";position:absolute;left:14px;top:10px;font-family:var(--dsp);font-size:46px;
-  color:var(--gold);opacity:.45;line-height:.7}
-.oath p{margin:0;font-size:clamp(15px,1.9vw,18px);font-weight:600;letter-spacing:-.025em;line-height:1.5;color:#fff}
-.oath span{display:block;margin-top:10px;font-family:var(--cond);font-weight:600;letter-spacing:.24em;
-  font-size:11px;color:var(--gold);opacity:.75;text-transform:uppercase}
-
 @media (max-width:900px){
   .pl-in,.pl.pt .pl-in{grid-template-columns:1fr;gap:20px}
   .pl.rev .pl-in{direction:ltr}
@@ -572,22 +563,19 @@ const PLAYERS = [
     {y:'2023', t:'신학과 롤 대회 <b>우승</b> (탑)'},
     {y:'2023', t:'남긱 롤대회 <b>준우승</b> (탑)'},
     {y:'2026', t:'WAY 신학과 내전 중 라인전 <b>&ldquo;무패&rdquo;</b>'}
-  ],
-  oath:'내 오른팔과 왼팔을 봉인하지 않는다면 탑은 불탈 것이다'
+  ]
 },
 {
   team:'A', slug:'yoyohan', name:'오요한', handle:'요요한', tier:'silver',
   pos:[{p:'top',k:'pri',n:'주 라인'}],
   limbs:['Renekton','Zac','TahmKench','Jax'], limbQ:[false,false,false,true],
-  career:[{y:'2023', t:'신학과 롤 대회 <b>우승</b> (미드)'}],
-  oath:'진성준은 내가 잡는다.'
+  career:[{y:'2023', t:'신학과 롤 대회 <b>우승</b> (미드)'}]
 },
 {
   team:'A', slug:'leebbang', name:'이상학', handle:'LEEBBANGBBOONG', tier:'none', captain:true,
   pos:[{p:'sup',k:'pri',n:'주 라인'}],
   limbs:['Lux','Morgana','Lulu','Blitzcrank'],
-  career:[{y:'2023', t:'신학과 롤 대회 <b>준우승</b> (서폿)'}],
-  oath:'이번엔 민지영 이긴다'
+  career:[{y:'2023', t:'신학과 롤 대회 <b>준우승</b> (서폿)'}]
 },
 {
   team:'A', slug:'dontcommand', name:'김동욱', handle:'명령하지마라', tier:'gold',
@@ -599,8 +587,7 @@ const PLAYERS = [
     {y:'2026', t:'WAY 칼바람 <b>10만 딜</b> 후 음료 계산'},
     {y:'2026', t:'WAY <b>최고의 아가리 파이터</b>'},
     {y:'2021<br>~2026', t:'신학 21 <b>최고의 아가리 파이터</b>'}
-  ],
-  oath:'생존형 원딜. 거리 조절의 장인. 등촌동 구마유시. 출격 준비 완료.'
+  ]
 },
 {
   team:'A', slug:'gospel', name:'박지훈', handle:'한손에복음들고', tier:'emerald',
@@ -612,8 +599,7 @@ const PLAYERS = [
     {y:'2021', t:'&lsquo;교연학원&rsquo; 내전 <b>MVP</b> (아가리 파이팅 부문)'},
     {y:'2024', t:'<b>롤 접음</b>'},
     {y:'2026', t:'생배 후 영윤이와 개강 날 &lsquo;욜로 PC 서귀포점&rsquo;에서 <b>플래티넘 달성</b>'}
-  ],
-  oath:'마음을 다하고 뜻을 다하여 임하겠습니다.'
+  ]
 },
 /* ---------- TEAM 지영 ---------- */
 {
@@ -625,8 +611,7 @@ const PLAYERS = [
     {y:'2016', t:'부인중학교 3-2반 <b>정글러</b>로 반대항전 <b>준우승</b>'},
     {y:'2016<br>~2020', t:'매 시즌 <b>키보드 워리어</b>로 활동. 골드를 찍었지만 하나님을 만나지 못해 채팅 제한으로 승리의 스킨 획득 실패 (5회)'},
     {y:'2021<br>~현재', t:'신학과 재학 후 매 시즌 <b>명예 5레벨</b> 유지 중'}
-  ],
-  oath:null
+  ]
 },
 {
   team:'B', slug:'suyoungyun', name:'서영윤', handle:'수영윤', tier:'silver',
@@ -636,8 +621,7 @@ const PLAYERS = [
     {y:'', t:'제주도 서귀포시 <b>욜로PC 솔로 랭크 무패</b> 기록 보유'},
     {y:'', t:'북미 서버 2년간 플레이 경험 보유 <b>(무려 유학파)</b>'},
     {y:'2026', t:'WAY 신학과 학생회 내전 참가 중 <b>카직스 블랙리스트 등재</b> (Neg)'}
-  ],
-  oath:'지훈이는 이기겠습니다'
+  ]
 },
 {
   team:'B', slug:'tft', name:'유성민', handle:'내가 좀더 잘할게 / 롤토체스 전용계정', short:'롤토체스 전용계정', tier:'emerald',
@@ -647,8 +631,7 @@ const PLAYERS = [
   career:[
     {y:'2023', t:'신학과 롤 대회 <b>준우승</b> (탑)'},
     {y:'2026', t:'WAY 신학과 내전 <b>원딜 · 미드 · 탑</b> 다양하게 소화'}
-  ],
-  oath:'신학과 롤대회 복수. 진성준 찢어버린다.'
+  ]
 },
 {
   team:'B', slug:'kiin', name:'민지영', handle:'KIIN', tier:'iron', portrait:true, captain:true,
@@ -659,8 +642,7 @@ const PLAYERS = [
   career:[
     {y:'2026', t:'WAY 내전 <b>인기만점 원픽 서포터</b> (4D 효과까지)'},
     {y:'', t:'승률 <b>매우매우 높음</b>'}
-  ],
-  oath:'지금 바로 뽑아주세요'
+  ]
 },
 {
   team:'B', slug:'sincheonji', name:'이동호', handle:'신천지사랑', tier:'gold',
@@ -671,8 +653,7 @@ const PLAYERS = [
     {y:'', t:'전 계정 <b>영구 정지 1회</b>'},
     {y:'', t:'이만희 만세 × <b>5739번</b>'},
     {y:'', t:'대전 신천지 맛디아지파배 롤 내전 <b>참여하고 싶음</b>'}
-  ],
-  oath:null
+  ]
 }
 ];
 
@@ -764,7 +745,6 @@ function profile(p, idx){
         <ul class="career">${p.career.map(c=>`<li><span class="yr ${c.y?'':'none'}">${c.y||'—'}</span><span>${c.t}</span></li>`).join('')}</ul>
       </div>
 
-      ${p.oath?`<div class="oath"><p>${esc(p.oath)}</p><span>각오 · Oath</span></div>`:''}
     </div>
   </div>
 </article>`;
