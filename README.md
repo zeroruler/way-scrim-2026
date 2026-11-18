@@ -1,6 +1,6 @@
 # 2026 WAY 신학과 내전
 
-WAY 신학과 학생회 리그 오브 레전드 내전 로스터 페이지. TEAM 영윤 vs TEAM 지훈, 10인 선수 프로필.
+WAY 신학과 학생회 리그 오브 레전드 내전 로스터 페이지. TEAM 상학 vs TEAM 지영, 10인 선수 프로필.
 
 - 정적 HTML 한 파일 (`index.html`) + `assets/`
 - 포지션 아이콘: Riot 챔피언 선택 UI SVG
